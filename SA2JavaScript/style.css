@@ -1,0 +1,34 @@
+body {
+    height: 70vh;
+}
+
+.container-fluid {
+    margin-top: 200px;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lilita One', cursive;
+    color: rgb(255, 255, 255);
+}
+
+.card-img-top {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Lilita One', cursive;
+}
+
+.card-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+}

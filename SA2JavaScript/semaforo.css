@@ -1,0 +1,194 @@
+body {
+    background-color: rgb(96, 193, 238);
+    height: 90vh;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body .container-fluid {
+    width: 100%;
+    height: 90vh;
+}
+
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    font-size: 4vh;
+    color: white;
+}
+
+.semaforo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    height: 550px;
+    margin-top: 15px;
+    background-color: rgb(39, 39, 39);
+    padding: 20px;
+    border-radius: 20px;
+    border: 4px solid rgb(117, 117, 117);
+}
+
+.vermelho, .amarelo, .verde {
+    width: 180px;
+    height: 170px;
+    border-radius: 120px;
+}
+
+.vermelho {
+    margin-bottom: 15px;
+    background-color: red;
+    border-color: red;
+    border: red 2px solid;
+}
+
+.amarelo {
+    margin-bottom: 15px;
+    background-color: yellow;
+    border-color: yellow;
+    border: yellow 2px solid;
+}
+
+.verde {
+    background-color: rgb(3, 211, 3);
+    border-color: rgb(3, 211, 3);
+    border: rgb(3, 211, 3) 2px solid;
+}
+
+.desligado {
+    transition: 0.2s;
+    opacity: 0.6;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.botao {
+    margin: 10px;
+    padding: 9px;
+    font-size: 19px;
+    border-radius: 7px;
+    border-color: black;
+}
+
+.botao:hover {
+    border-color: rgb(88, 88, 88);
+}
+
+#bVermelho {
+    background-color: rgb(255, 255, 255);
+}
+
+#bVermelho:hover {
+    transition: 0.4s;
+    background-color: red;
+    cursor: pointer;
+}
+
+#bAmarelo {
+    background-color: rgb(255, 255, 255);
+}
+
+#bAmarelo:hover {
+    transition: 0.4s;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+#bVerde {
+    background-color: rgb(255, 255, 255);
+}
+
+#bVerde:hover {
+    transition: 0.4s;
+    background-color: rgb(3, 211, 3);
+    cursor: pointer;
+}
+
+#bAuto {
+    background-color: rgb(255, 255, 255);
+}
+
+#bAuto:hover {
+    transition: 0.4s;
+    background-color: rgb(0, 140, 255);
+    color: white;
+    cursor: pointer;
+}
+
+#bReset {
+    background-color: rgb(255, 255, 255);
+}
+
+#bReset:hover {
+    transition: 0.4s;
+    background-color: rgb(0, 140, 255);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 1024px) {
+    .semaforo {
+        width: 170px;
+        height: 500px;
+    }
+
+    .vermelho, .amarelo, .verde {
+        width: 150px;
+        height: 150px;
+        border-radius: 120px;
+    }
+
+    .botao {
+        font-size: 14px;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+}
+
+
+@media (max-width: 732px) {
+    .semaforo {
+        width: 145px;
+        height: 430px;
+    }
+
+    .vermelho, .amarelo, .verde {
+        width: 130px;
+        height: 130px;
+        border-radius: 120px;
+    }
+
+    .botao {
+        font-size: 15px;
+    }
+
+    .botoes {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+}

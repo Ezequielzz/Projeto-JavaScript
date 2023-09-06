@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="semaforo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Work+Sans&display=swap"
+        rel="stylesheet">
+    <title>Projeto JavaScript - Semáforo</title>
+</head>
+
+<body>
+    
+    <!-- Conteudo da Pagina -->
+    <div class="container-fluid">
+        <!-- Titulo -->
+        <div class="titulo">
+            <h2>Semáforo Interativo</h2>
+        </div>
+
+        <div class="semaforo-container">
+            <div class="semaforo">
+                <!-- Luzes do Semáforo -->
+                <div class="cores">
+                    <div class="vermelho"></div>
+                    <div class="amarelo"></div>
+                    <div class="verde"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Botões Laterais -->
+        <div class="botoes">
+            <button onclick=pare() class="botao" id="bVermelho">Vermelho</button>
+            <button onclick=atencao() class="botao" id="bAmarelo">Amarelo</button>
+            <button onclick=siga() class="botao" id="bVerde">Verde</button>
+            <button onclick=auto() class="botao" id="bAuto">Automático</button>
+            <button onclick=reset() class="botao" id="bReset">Resetar</button>
+        </div>
+
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>
