@@ -170,6 +170,6 @@
         transform: translateY(600px) rotate(1470deg);
     }
     100%{
-        transform: translateY(700px) rotate(1560deg);
+        transform: translateY(800px) rotate(1560deg);
     }
 }
