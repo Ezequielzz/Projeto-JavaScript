@@ -33,9 +33,13 @@ body {
     font-weight: 500;
 }
 
+.card {
+    transition: all 0.35s ease-in;
+    transition: all 0.25s ease-out;
+}
+
 .card:hover {
-    transition: 0.35s;
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
 }
