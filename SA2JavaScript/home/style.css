@@ -32,3 +32,10 @@ body {
     font-size: 17px;
     font-weight: 500;
 }
+
+.card:hover {
+    transition: 0.35s;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+}
