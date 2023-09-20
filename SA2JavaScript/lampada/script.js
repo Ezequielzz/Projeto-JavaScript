@@ -29,8 +29,8 @@ window.onload = function () {
 
 // Função de reset da lâmpada
 function reset() {
-    cont = 0;
-    btn_reset.style.display = 'none';
+    cont = 0; //Define a variável cont para zero novamente
+    btn_reset.style.display = 'none'; //faz com que o botão de reset 'suma'
 }
 
 // Função de ligar
@@ -71,23 +71,23 @@ function ligar() {
 }
 
 //Função de quebrar
+// Está função é executada ao clicar na imagem da lâmpada
 function quebrar() {
     if (contQuebrar < 10) {
         // Conta quantas vezes você pode clicar na lâmpada até quebrar
         contQuebrar++;
-        impact_glass.play();
-        lamp_img.style.transform = 'rotate(-10deg) scale(0.9)';
-        // função de time out
+        impact_glass.play(); //toca o som de "impacto"
+        lamp_img.style.transform = 'rotate(-10deg) scale(0.9)'; //"Inclina" e "afunda" a imagem
+        // função de time out (Define um cronômetro para executar uma ação)
         setTimeout(function () {
-            lamp_img.style.transform = 'rotate(0deg) scale(1)';
+            lamp_img.style.transform = 'rotate(0deg) scale(1)'; //volta para sua posição normal
+            // após clicar 10 vezes, a lâmpada irá quebrar
             if (contQuebrar == 10) {
-                lamp_img.src = quebrado;
-                broken_glass_animation.style.display = 'block';
-                btn_replace.style.display = 'block';
-                broken_glass_sound.play();
-                isBroken = false;
-                
-                return;
+                lamp_img.src = quebrado; //troca a imagem para a lâmpada quebrada
+                broken_glass_animation.style.display = 'block'; //faz com que a div com as animações dos cascos de vidro apareceça
+                btn_replace.style.display = 'block'; //faz com que o botão de trocar apareça na tela
+                broken_glass_sound.play(); // toca o som da lâmpada quebrando
+                isBroken = false; //define a variável booleana como 'false' para com que a função de ligar não seja executada.
             }
         }, 100);
     }
@@ -95,11 +95,11 @@ function quebrar() {
 
 // Função de troca
 function trocar() {
-    lamp_img.src = desligado;
-    btn_replace.style.display = 'none';
-    broken_glass_animation.style.display = 'none';
-    contQuebrar = 0;
-    cont = 0;
-    btn_reset.style.display = 'none';
-    isBroken = true;
+    lamp_img.src = desligado; //troca a imagem para a lâmpada quebrada
+    btn_replace.style.display = 'none'; //remove o botão de troca
+    broken_glass_animation.style.display = 'none'; //reomve a div com a animação de quebrar
+    contQuebrar = 0; //reseta o contador de quebrar para 0
+    cont = 0; //reseta o cont normal
+    btn_reset.style.display = 'none'; //desaparece com o botão de reset (Caso a função da lâmpada queimar for atividade antes da função quebrar)
+    isBroken = true; //muda a variável boolean para true
 }
