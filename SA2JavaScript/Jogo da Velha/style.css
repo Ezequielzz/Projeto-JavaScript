@@ -8,11 +8,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Para centralizar verticalmente */
+    min-height: 100vh;
 }
 
 /* Tela de seleção de jogador */
-.select-player {
+.selecionar-jogador {
     background: #fff;
     color: purple;
     border-radius: 5px;
@@ -23,12 +23,12 @@ body {
     transition: all 0.30s ease;
 }
 
-.select-player h2 {
+.selecionar-jogador h2 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.select-player button {
+.selecionar-jogador button {
     font-size: 18px;
     font-weight: bold;
     padding: 10px 20px;
@@ -40,7 +40,7 @@ body {
     transition: background 0.3s ease;
 }
 
-.select-player button:hover {
+.selecionar-jogador button:hover {
     background: #4b0976;
     transform: scale(0.9);
 }
@@ -77,12 +77,13 @@ main {
     background: #eee;
 }
 
-.currentPlayer {
+/* Mostrar de quem é a vez */
+.jogadorVez {
     font-size: 20px;
     margin-top: 20px;
 }
 
-.replay-button {
+.JogarNovamente-button {
     font-size: 18px;
     font-weight: bold;
     padding: 10px 20px;
@@ -92,9 +93,10 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
+    /* transition é para mexer o botão */
 }
 
-.replay-button:hover {
+.JogarNovamente-button:hover {
     background: #4b0976;
     transition: background 0.3s ease;
     transform: scale(0.9);

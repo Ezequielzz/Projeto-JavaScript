@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <title>Jogo da Velha</title>
 </head>
+
 <body>
     <!-- tela inicial, escolher jogador -->
-    <div class="select-player">
+    <div class="selecionar-jogador">
         <h2>Escolha seu jogador:</h2>
-        <button onclick="selectPlayer('X')">Jogador (X)</button>
-        <button onclick="selectPlayer('O')">Jogador (O)</button>
+        <button onclick="selecionarJogador('X')">Jogador (X)</button>
+        <button onclick="selecionarJogador('O')">Jogador (O)</button>
     </div>
-    
-<!-- 2ºtela, area do jogo, fica display none, para ela não aparecer na tela inicial -->
+
+    <!-- 2ºtela, area do jogo, fica display none, para ela não aparecer na tela inicial, no script mandamos ela aparecer na hora certa -->
     <main style="display: none;">
         <h1>JOGO DA VELHA</h1>
         <!-- vai mostrar de quem é a vez -->
-        <h2 class="currentPlayer">VEZ DO: X</h2>
+        <h2 class="jogadorVez">VEZ DO: X</h2>
         <div class="casas">
-            <button data-i="1"></button>
-            <button data-i="2"></button>
-            <button data-i="3"></button>
-            <button data-i="4"></button>
-            <button data-i="5"></button>
-            <button data-i="6"></button>
-            <button data-i="7"></button>
-            <button data-i="8"></button>
-            <button data-i="9"></button>
+            <button casa-i="1"></button>
+            <button casa-i="2"></button>
+            <button casa-i="3"></button>
+            <button casa-i="4"></button>
+            <button casa-i="5"></button>
+            <button casa-i="6"></button>
+            <button casa-i="7"></button>
+            <button casa-i="8"></button>
+            <button casa-i="9"></button>
         </div>
-       <br>
-        <button class="replay-button" onclick="replay()">Jogar Novamente</button>
+        <br>
+        <!-- botão para reiniciar -->
+        <button class="JogarNovamente-button" onclick="JogarNovamente()">Jogar Novamente</button>
     </main>
+    <!-- audios do jogo -->
+    <audio id="risada" src="audio/Risada.mp3"></audio> 
+    <audio id="botao" src="audio/Botao.mp3"></audio>
     <script src="script.js"></script>
 </body>
+
 </html>
