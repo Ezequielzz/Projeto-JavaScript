@@ -81,15 +81,15 @@ function quebrar() {
         // função de time out (Define um cronômetro para executar uma ação)
         setTimeout(function () {
             lamp_img.style.transform = 'rotate(0deg) scale(1)'; //volta para sua posição normal
-            // após clicar 10 vezes, a lâmpada irá quebrar
-            if (contQuebrar == 10) {
-                lamp_img.src = quebrado; //troca a imagem para a lâmpada quebrada
-                broken_glass_animation.style.display = 'block'; //faz com que a div com as animações dos cascos de vidro apareceça
-                btn_replace.style.display = 'block'; //faz com que o botão de trocar apareça na tela
-                broken_glass_sound.play(); // toca o som da lâmpada quebrando
-                isBroken = false; //define a variável booleana como 'false' para com que a função de ligar não seja executada.
-            }
         }, 100);
+        // após clicar 10 vezes, a lâmpada irá quebrar
+        if (contQuebrar == 10) {
+            lamp_img.src = quebrado; //troca a imagem para a lâmpada quebrada
+            broken_glass_animation.style.display = 'block'; //faz com que a div com as animações dos cascos de vidro apareceça
+            btn_replace.style.display = 'block'; //faz com que o botão de trocar apareça na tela
+            broken_glass_sound.play(); // toca o som da lâmpada quebrando
+            isBroken = false; //define a variável booleana como 'false' para com que a função de ligar não seja executada.
+        }
     }
 }
 
