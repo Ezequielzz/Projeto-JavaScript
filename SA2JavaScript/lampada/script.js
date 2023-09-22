@@ -22,11 +22,6 @@ var broken_glass_sound = document.getElementById("broken_glass_sound");
 var impact_glass = document.getElementById("impact_glass");
 var broken_glass_animation = document.getElementById("broken_glass");
 
-// Função de piscar a lâmpada quando a página for carregada
-window.onload = function () {
-
-}
-
 // Função de reset da lâmpada
 function reset() {
     cont = 0; //Define a variável cont para zero novamente
@@ -35,16 +30,24 @@ function reset() {
 
 // Função de ligar
 function ligar() {
+    // Verificará se a Lâmpada está quebrada
     if (isBroken) {
+
+        // Contador para contar quantas vezes o usuário clicar no interroptor
         cont++;
+
+        // Se o contador for maior ou igual a 30, a lâmpada irá queimar
         if (cont >= 30) {
             // Método de queimar
-            lamp_img.src = "img/light-bulb-off.png";
-            btn_reset.style.display = 'block';
+            lamp_img.src = desligado; // Trocara e mantera a imagem da Lâmpada queimada
+            btn_reset.style.display = 'block'; // Faz com que o botão para resetar apareça na tela
+
+            // Uma função que mantem funcionando o interruptor, mesmo se a Lâmpada estiver queimada
+            // (Evita de ocorrer o problema de falta de sincronia entre o botão e a Lâmpada)
             if (tempNum == 0) {
-                light_switch.src = off;
-                tempNum = 1;
-                switch_click.play();
+                light_switch.src = off; // Muda a imagem do interruptor para off
+                tempNum = 1; // Variável que faz a sincronia ocorrer
+                switch_click.play(); //toca o som do interruptor
             }
             else {
                 light_switch.src = on;
@@ -52,8 +55,9 @@ function ligar() {
                 switch_click.play();
             }
         }
+        
+        // Caso aquela primeira condição não for chamada, a Lâmpada acenderá e apagará normalmente, mantendo a sincronia com o switch
         else {
-
             if (tempNum == 0) {
                 lamp_img.src = desligado;
                 light_switch.src = off;
@@ -69,7 +73,6 @@ function ligar() {
         }
     }
 }
-
 //Função de quebrar
 // Está função é executada ao clicar na imagem da lâmpada
 function quebrar() {
